@@ -40,6 +40,8 @@ en:
       confirm: "Are you sure?"
       sign_up: "Sign Up"
       login: "Log in"
+      logout: "Log Out"
+      profile: "Profile"
     unhappy: "Unhappy?"
     back: "Back"
     sign_up: "Sign Up"

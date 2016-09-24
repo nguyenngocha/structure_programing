@@ -37,8 +37,4 @@
 <% end %>
 
 <h3><%= t "devise.button.cancel" %></h3>
-
-<p><%= t "devise.unhappy" %> <%= button_to t("devise.button.cancel"),
-  registration_path(resource_name), data: {confirm: t("devise.button.confirm")}, method: :delete %></p>
-
 <%= link_to t("devise.back"), :back %>
