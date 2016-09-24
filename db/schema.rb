@@ -90,7 +90,7 @@ ActiveRecord::Schema.define(version: 20160924010105) do
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
-    t.integer  "role"
+    t.integer  "role",                   default: 0
     t.string   "phone_number"
     t.string   "avatar"
     t.datetime "created_at",                          null: false
