@@ -21,3 +21,26 @@
 
 en:
   hello: "Hello world"
+  devise:
+    change_password: "Change your password"
+    new_password: "New password"
+    minimum: "%{number} characters minimum"
+    confirm_new_password: "Confirm new password"
+    change_password: "Change my password"
+    forgot_password: "Forgot your password?"
+    send_reset_password: "Send me reset password instructions"
+    registration:
+      edit: "Edit %{name}"
+      confirm_for: "Currently waiting confirmation for: %{unconfirmed_email}"
+      not_blank: "(leave blank if you don't want to change it)"
+    password_confirm: "(we need your current password to confirm your changes)"
+    button:
+      update: "Update"
+      cancel: "Cancel my account"
+      confirm: "Are you sure?"
+      sign_up: "Sign Up"
+      login: "Log in"
+    unhappy: "Unhappy?"
+    back: "Back"
+    sign_up: "Sign Up"
+    login: "Log In"
