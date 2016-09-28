@@ -1,3 +1,21 @@
 en:
   admin:
     home_pages: "Admin Home Page"
+    cities: "Cities"
+    authorize: "you can't access this page"
+    edit: "Edit"
+    delete: "Delete"
+    city:
+      new: "Add"
+      new_city: "Add City"
+      name: "City Name"
+      save: "Save changes"
+      edit_city: "Edit City"
+      edit: "Edit"
+      delete: "Delete"
+    confirm_delete: "Are you sure?"
+    not_found: "%{source} not found"
+    add_success: "%{source} added successfully"
+    delete_success: "%{source} deleted successfully"
+    delete_fail: "%{source} delete failed"
+    update_success: "%{source} updated successfully"
