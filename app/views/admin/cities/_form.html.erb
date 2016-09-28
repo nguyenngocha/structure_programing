@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-md-4">
+    <%= form_for [:admin, @city] do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name, class: "form-control" %>
+
+      <%= f.submit yield(:submit), class: "btn btn-success" %>
+    <% end %>    
+  </div>
+</div>

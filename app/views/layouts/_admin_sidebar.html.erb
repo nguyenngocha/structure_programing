@@ -12,6 +12,20 @@
       <% end %>
     </li>
     <li class="panel-group hvr-bounce-to-left">
+      <a data-toggle="collapse" href="#system">
+        <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>  
+        <%= t "admmin.system" %>
+      </a>
+      <ul id="system" class="panel-collapse collapse">
+        <li>
+          <%= link_to admin_cities_path do %>
+            <span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span>  
+            <span class="lm-text"><%= t "admin.cities" %></span>
+          <% end %>
+        </li>
+      </ul>
+    </li>
+    <li class="panel-group hvr-bounce-to-left">
       <a data-toggle="collapse" href="#account">
         <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>  
         <%= t :account %>

@@ -5,6 +5,13 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for resource
     get_root_path
   end
+  
+  def verify_admin
+    unless current_user.admin?
+      flash[:danger] = t "admin.authorize"
+      redirect_to root_path
+    end
+  end
 
   private
   def namespace

@@ -10,10 +10,24 @@
 
   <body>
     <% if current_user && current_user.admin? && @namespace == "admin" %>
-      <%= render "layouts/admin_sidebar" %>
+      <div id="wrapper">
+        <%= render "layouts/admin_sidebar" %>
+      </div>
+      <div class="admin">
+        <% flash.each do |message_type, message| %>
+          <%= content_tag :div, message, class: "alert alert-#{message_type}" %>
+        <% end %>
+        <div class="admin-content">
+          <div class="container">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
     <% else %>
       <%= render "layouts/header" %>
+      <div class="container td-body">
+        <%= yield %>
+      </div>
     <% end %>
-    <%= yield %>
   </body>
 </html>
