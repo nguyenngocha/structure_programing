@@ -46,3 +46,6 @@ en:
     back: "Back"
     sign_up: "Sign Up"
     login: "Log In"
+  error:
+    form: "This form has "
+    error: "error"

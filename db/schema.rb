@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20160924010105) do
   create_table "addresses", force: :cascade do |t|
     t.integer  "city_id"
     t.integer  "town_id"
-    t.integer  "village_id"
+    t.string   "village"
     t.string   "home"
     t.integer  "user_id"
     t.datetime "created_at", null: false
@@ -23,7 +23,6 @@ ActiveRecord::Schema.define(version: 20160924010105) do
     t.index ["city_id"], name: "index_addresses_on_city_id"
     t.index ["town_id"], name: "index_addresses_on_town_id"
     t.index ["user_id"], name: "index_addresses_on_user_id"
-    t.index ["village_id"], name: "index_addresses_on_village_id"
   end
 
   create_table "cart_items", force: :cascade do |t|
@@ -84,8 +83,10 @@ ActiveRecord::Schema.define(version: 20160924010105) do
 
   create_table "towns", force: :cascade do |t|
     t.string   "name"
+    t.integer  "city_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["city_id"], name: "index_towns_on_city_id"
   end
 
   create_table "users", force: :cascade do |t|

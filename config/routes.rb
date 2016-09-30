@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   namespace :admin do
     root controller: :static_pages, action: :home, as: :root
     resources :cities, except: :show
+    resources :towns, except: :show
   end
 
   devise_for :users, controllers: {
