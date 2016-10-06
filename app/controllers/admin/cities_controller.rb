@@ -26,17 +26,12 @@ class Admin::CitiesController < ApplicationController
       flash[:success] = t "admin.update_success", source: "city"
       redirect_to admin_cities_path
     else
-      load_city
       render :edit
     end
   end
 
   def destroy
-    if @city.destroy
-      flash[:success] = t "admin.delete_success", source: "city"
-    else
-      flash[:danger] = t "admin.delete_fail", source: "city"
-    end
+    flash[:success] = t "admin.delete_success", source: "city"
     redirect_to admin_cities_path
   end
 

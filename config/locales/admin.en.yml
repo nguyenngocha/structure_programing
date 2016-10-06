@@ -19,3 +19,13 @@ en:
     delete_success: "%{source} deleted successfully"
     delete_fail: "%{source} delete failed"
     update_success: "%{source} updated successfully"
+    towns: "Towns"
+    town:
+      new: "Add"
+      new_town: "Add Town"
+      name: "Towner Name"
+      city: "City"
+      edit: "Edit"
+      delete: "Delete"
+      edit_town: "Edit Town"
+      save: "Save changes"

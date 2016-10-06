@@ -1,0 +1,10 @@
+<tr>
+  <th><%= town.id %></th>
+  <th><%= town.name %></th>
+  <th><%= town.city.name %></th>
+  <th><%= link_to t("admin.town.edit"), edit_admin_town_path(town),
+    class: "warning" %></th>
+  <th><%= link_to t("admin.town.delete"), admin_town_path(town),
+    method: :delete, data: {confirm: t("admin.confirm_delete")},
+    class: "danger" %></th>
+</tr>
