@@ -26,6 +26,9 @@
     <% else %>
       <%= render "layouts/header" %>
       <div class="container td-body margin-top-60">
+        <% flash.each do |message_type, message| %>
+          <div class="alert alert-<%= message_type %>"><%= message %></div>
+        <% end %>
         <%= yield %>
       </div>
     <% end %>

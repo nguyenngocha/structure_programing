@@ -18,9 +18,29 @@
       <% end %>
     </li>
     <li class="panel-group hvr-bounce-to-left">
+      <a data-toggle="collapse" href="#product">
+        <span class="glyphicon glyphicon glyphicon-th-list" aria-hidden="true"></span>  
+        <%= t "admin.products" %>
+      </a>
+      <ul id="product" class="panel-collapse collapse">
+        <li>
+          <%= link_to "#" do %>
+            <span class="glyphicon glyphicon glyphicon-th-list" aria-hidden="true"></span>  
+            <span class="lm-text"><%= t "admin.products" %></span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to admin_product_types_path do %>
+            <span class="glyphicon glyphicon-th" aria-hidden="true"></span>  
+            <span class="lm-text"><%= t "admin.product_types" %></span>
+          <% end %>
+        </li>
+      </ul>
+    </li>
+    <li class="panel-group hvr-bounce-to-left">
       <a data-toggle="collapse" href="#system">
         <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>  
-        <%= t "admmin.system" %>
+        <%= t "admin.system" %>
       </a>
       <ul id="system" class="panel-collapse collapse">
         <li>

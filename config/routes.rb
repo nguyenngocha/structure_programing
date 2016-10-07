@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :cities, except: :show
     resources :towns, except: :show
     resources :users
+    resources :product_types
   end
 
   devise_for :users, controllers: {
