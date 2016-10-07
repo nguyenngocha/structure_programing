@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     root controller: :static_pages, action: :home, as: :root
     resources :cities, except: :show
     resources :towns, except: :show
+    resources :users
   end
 
   devise_for :users, controllers: {

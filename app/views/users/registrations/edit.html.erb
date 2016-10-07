@@ -1,40 +1,14 @@
-<h2><%= t "devise.registration.edit", name: resource_name.to_s.humanize %></h2>
+<%= provide :title, t("devise.registration.edit") %>
+<%= provide :submit, t("devise.registration.save") %>
+<h1><%= t "devise.registration.edit", name: resource_name.to_s.humanize %></h1>
 
-<%= form_for resource, as: resource_name, url: registration_path(resource_name), html: {method: :put} do |f| %>
-  <%= devise_error_messages! %>
+<div class="row">
+  <%= render "form" %>
+</div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+<div class="row">
+  <div class="col-md-offset-1">
+    <h5><%= t "devise.button.cancel" %></h5>
+    <%= link_to t("devise.back"), :back %>
   </div>
-
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div><%= t "devise.registration.confirm_for", unconfirmed_email: resource.unconfirmed_email %></div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :password %> <i><%= t "devise.registration.not_blank" %></i><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= t "devise.minimum", number: @minimum_password_length %></em>
-    <% end %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :current_password %> <i><%= t "devise.password_confirm" %></i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit t("devise.button.update") %>
-  </div>
-<% end %>
-
-<h3><%= t "devise.button.cancel" %></h3>
-<%= link_to t("devise.back"), :back %>
+</div>
