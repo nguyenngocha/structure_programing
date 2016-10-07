@@ -29,3 +29,12 @@ en:
       delete: "Delete"
       edit_town: "Edit Town"
       save: "Save changes"
+    users: "Users"
+    user:
+      new: "New User"
+      name: "Name"
+      email: "Email"
+      phone: "Phone"
+      save: "Save changes"
+      new: "New User"
+    id: "ID"
