@@ -1,4 +1,4 @@
-class Admin::TownsController < ApplicationController
+class Admin::TownsController < Admin::AdminController
   before_action :load_city, only: [:new, :edit]
   before_action :load_town, only: [:edit, :update, :destroy]
 

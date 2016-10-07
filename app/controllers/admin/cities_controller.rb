@@ -1,6 +1,4 @@
-class Admin::CitiesController < ApplicationController
-  before_action :authenticate_user!
-  before_action :verify_admin
+class Admin::CitiesController < Admin::AdminController
   before_action :load_city, only: [:edit, :destroy, :update]
   before_action :build_city, only: :create
 

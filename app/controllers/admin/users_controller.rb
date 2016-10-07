@@ -1,4 +1,4 @@
-class Admin::UsersController < ApplicationController
+class Admin::UsersController < Admin::AdminController
   before_action :load_address, only: [:new, :edit]
   before_action :find_user, only: [:edit, :edit, :update, :destroy]
 

@@ -2,7 +2,7 @@ en:
   admin:
     home_pages: "Admin Home Page"
     cities: "Cities"
-    authorize: "you can't access this page"
+    authorize: "you can't access that page"
     edit: "Edit"
     delete: "Delete"
     city:
@@ -38,3 +38,11 @@ en:
       save: "Save changes"
       new: "New User"
     id: "ID"
+    product_types: "Product Types" 
+    product_type:
+      new: "New Product Type"
+      name: "Product Type Name"
+      edit: "Edit"
+      edit_product_type: "Edit Product Type"
+      save: "Save Changes"
+    products: "Products"

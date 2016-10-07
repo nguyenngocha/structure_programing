@@ -1,0 +1,11 @@
+<tr>
+  <th><%= product_type.id %></th>
+  <th><%= product_type.name %></th>
+  <th><%= link_to t("admin.product_type.edit"),
+    edit_admin_product_type_path(product_type),
+    class: "warning" %></th>
+  <th><%= link_to t("admin.product_type.delete"),
+    admin_product_type_path(product_type),
+    method: :delete, data: {confirm: t("admin.confirm_delete")},
+    class: "danger" %></th>
+</tr>
