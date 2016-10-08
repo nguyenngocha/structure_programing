@@ -1,0 +1,20 @@
+<%= provide :title, @product.name %>
+
+<h1>Product Name: <%= @product.name %></h1>
+
+<div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><i class="glyphicon glyphicon-align-justify"></i>
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><%= link_to t("admin.product.edit"), edit_admin_product_path %></li>
+    <li><%= link_to t("admin.product.delete"),
+      admin_product_path(@product), method: :delete,
+      data: {confirm: t("admin.confirm_delete")} %></li>
+  </ul>
+</div>
+<br />
+<p>Description: <%= @product.description %></p>
+<p>Price: <%= @product.price %></p>
+<p>Product Type: <%= @product.product_type.name %></p>
+<p>Product Color: <%= @product.product_color.name %></p>
+<p>Product Location: <%= @product.location %></p>

@@ -1,0 +1,8 @@
+<tr>
+  <th><%= product.id %></th>
+  <th><%= link_to product.name, admin_product_path(product) %></th>
+  <th><%= product.price %></th>
+  <th><%= product.product_type.name %></th>
+  <th><%= product.product_color.name %></th>
+  <th><%= product.location%></th>
+</tr>

@@ -71,14 +71,14 @@ ActiveRecord::Schema.define(version: 20160924010105) do
   create_table "products", force: :cascade do |t|
     t.string   "name"
     t.integer  "price"
-    t.integer  "type_id"
-    t.integer  "color_id"
+    t.integer  "product_type_id"
+    t.integer  "product_color_id"
     t.string   "description"
     t.string   "location"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.index ["color_id"], name: "index_products_on_color_id"
-    t.index ["type_id"], name: "index_products_on_type_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.index ["product_color_id"], name: "index_products_on_product_color_id"
+    t.index ["product_type_id"], name: "index_products_on_product_type_id"
   end
 
   create_table "towns", force: :cascade do |t|

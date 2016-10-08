@@ -1,0 +1,27 @@
+<%= provide :title, t("admin.products") %>
+
+<h1><%= t "admin.products" %></h1>
+<%= link_to new_admin_product_path do %>
+  <div class="btn btn-success">
+    <%= t "admin.product.new" %>
+    <i class="glyphicon glyphicon-plus"></i>
+  </div>
+<% end %>
+<br/ >
+<br/ >
+<table class="table">
+  <thead>
+    <tr>
+      <th><%= t "admin.id" %></th>
+      <th><%= t "admin.product.name" %>
+        <i class="glyphicon glyphicon-equalizer"></i></th>
+      <th><%= t "admin.product.price" %></th>
+      <th><%= t "admin.product.type" %></th>
+      <th><%= t "admin.product.color" %></th>
+      <th><%= t "admin.product.location" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @products %>
+  </tbody>
+</table>
