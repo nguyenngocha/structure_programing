@@ -1,0 +1,11 @@
+<tr>
+  <th><%= product_color.id %></th>
+  <th><%= product_color.name %></th>
+  <th><%= link_to t("admin.product_color.edit"),
+    edit_admin_product_color_path(product_color),
+    class: "warning" %></th>
+  <th><%= link_to t("admin.product_color.delete"),
+    admin_product_color_path(product_color), method: :delete,
+    data: {confirm: t("admin.confirm_delete")},
+    class: "danger" %></th>
+</tr>
