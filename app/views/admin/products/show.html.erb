@@ -18,3 +18,7 @@
 <p>Product Type: <%= @product.product_type.name %></p>
 <p>Product Color: <%= @product.product_color.name %></p>
 <p>Product Location: <%= @product.location %></p>
+<h3>Image</h3>
+<% @product.product_images.each do |image| %>
+  <%= image_tag image.image %>
+<% end %>

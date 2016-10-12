@@ -24,6 +24,12 @@
 
       <%= f.label :location %>
       <%= f.text_field :location, class: "form-control" %>
+      
+      <%= f.fields_for :product_images do |product_image_field| %>
+        <%= render "product_image_field", f: product_image_field %>
+      <% end %>
+      <%= link_to_add_fields "Add other product images",
+        f, :product_images %>
       <br />
       <div class="col-md-4 col-md-offset-4">      
         <%= f.submit yield(:submit), class: "btn btn-success" %>
