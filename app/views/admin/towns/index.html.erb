@@ -1,5 +1,5 @@
 <%= provide :title, t("admin.towns") %>
-
+<div class="col-md-10">
 <h1><%= t "admin.towns" %></h1>
 <%= link_to new_admin_town_path do %>
   <div class="btn btn-success">
@@ -17,11 +17,14 @@
         <i class="glyphicon glyphicon-tower"></i></th>
       <th><%= t "admin.town.city" %>
         <i class="glyphicon glyphicon-equalizer"></i></th>
-      <th><i class="glyphicon glyphicon-wrench"></i></th>
-      <th><i class="glyphicon glyphicon-trash"></i></th>
+      <th style="background-color: #d8e09a; width:50px; text-align:center">
+        <i class="glyphicon glyphicon-wrench"></i></th>
+      <th style="background-color: #c19a56; width:50px; text-align:center">
+        <i class="glyphicon glyphicon-trash"></i></th>
     </tr>
   </thead>
   <tbody>
     <%= render @towns %>
   </tbody>
 </table>
+</div>

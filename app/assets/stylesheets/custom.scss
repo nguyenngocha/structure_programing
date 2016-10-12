@@ -203,3 +203,48 @@ input {
 .margin-top-60 {
   margin-top: 60px;
 }
+
+//ManhDx
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    background-color: #f5f5f5;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.table thead{
+  background-color:#dff0d8;
+}
+.table .warning{
+    color: #fff;
+    // background: #f0ad4e;
+    // border-color: #eea236;
+}
+.table .danger{
+  color: #fff;
+  // background-color: #d9534f;
+  // border-color: #d43f3a;
+}
+
+#sidebar-wrapper{
+  background: #1C514A;
+}
+.sidebar-nav li a {
+    color: #E4E22E;
+}
+html{
+ background:#b7b1b1; 
+}
+
+.edit {
+  background-color: #f0ad4e;
+  width:50px;
+  text-align:center;
+}
+
+.delete {
+  background-color:#d9534f;
+  width:50px;
+  text-align:center;
+}

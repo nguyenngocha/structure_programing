@@ -16,4 +16,7 @@ Rails.application.routes.draw do
     registrations: "users/registrations",
     passwords: "users/passwords"
   }
+
+  resources :products, only: :show
+  resources :user_items
 end
