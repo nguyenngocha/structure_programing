@@ -16,6 +16,7 @@
 //= require turbolinks
 //= require_tree .
 //= require nested_attributes
+//= require ckeditor/init
 
 $(document).on('ready', function() {
   setTimeout(function() {
