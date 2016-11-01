@@ -16,6 +16,9 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+test*
+# Ignore all added files
+public*
 
 # Ignore Byebug command history file.
 .byebug_history

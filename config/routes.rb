@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => "/ckeditor"
   root "static_pages#home"
 
   namespace :admin do
