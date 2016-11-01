@@ -1,29 +1,33 @@
 <%= provide :title, t("admin.users") %>
-
-<h1><%= t "admin.users" %></h1>
-<%= link_to new_admin_user_path do %>
-  <div class="btn btn-success">
-    <%= t "admin.user.new" %>
-    <i class="glyphicon glyphicon-plus"></i>
+<div class = "page-content">
+  <div class="col-md-10">
+    <h1><%= t "admin.users" %></h1>
+    <%= link_to new_admin_user_path do %>
+      <div class="btn btn-success">
+        <%= t "admin.user.new" %>
+        <i class="glyphicon glyphicon-plus"></i>
+      </div>
+    <% end %>
+    <br/ >
+    <br/ >
+    <table class="table">
+      <thead>
+        <tr>
+          <th><%= t "admin.id" %></th>
+          <th><%= t "admin.user.name" %>
+            <i class="glyphicon glyphicon-user"></i></th>
+          <th><%= t "admin.user.email" %>
+            <i class="glyphicon glyphicon-mail"></i></th>
+          <th><%= t "admin.user.phone" %>
+            <i class="glyphicon glyphicon-phone"></i></th>
+          <th style="background-color: #d8e09a; width:50px; text-align:center">
+            <i class="glyphicon glyphicon-wrench"></i></th>
+          <th style="background-color: #c19a56; width:50px; text-align:center"><i class="glyphicon glyphicon-trash"></i></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @users %>
+      </tbody>
+    </table>
   </div>
-<% end %>
-<br/ >
-<br/ >
-<table class="table">
-  <thead>
-    <tr>
-      <th><%= t "admin.id" %></th>
-      <th><%= t "admin.user.name" %>
-        <i class="glyphicon glyphicon-user"></i></th>
-      <th><%= t "admin.user.email" %>
-        <i class="glyphicon glyphicon-mail"></i></th>
-      <th><%= t "admin.user.phone" %>
-        <i class="glyphicon glyphicon-phone"></i></th>
-      <th><i class="glyphicon glyphicon-wrench"></i></th>
-      <th><i class="glyphicon glyphicon-trash"></i></th>
-    </tr>
-  </thead>
-  <tbody>
-    <%= render @users %>
-  </tbody>
-</table>
+</div>

@@ -1,11 +1,14 @@
 <tr>
-  <th><%= user.id %></th>
-  <th><%= user.name %></th>
-  <th><%= user.email %></th>
-  <th><%= user.phone_number %></th>
-  <th><%= link_to t("admin.user.edit"), edit_admin_user_path(user),
-    class: "warning" %></th>
-  <th><%= link_to t("admin.user.delete"), admin_user_path(user),
-    method: :delete, data: {confirm: t("admin.confirm_delete")},
-    class: "danger" %></th>
+  <td><%= user.id %></th>
+  <td><%= user.name %></th>
+  <td><%= user.email %></td>
+  <td><%= user.phone_number %></td>
+  <td class="edit">
+    <%= link_to t("admin.user.edit"), edit_admin_user_path(user),
+    class: "warning" %></td>
+  <td class="delete">
+    <%= link_to t("admin.user.delete"), admin_user_path(user),
+      method: :delete, data: {confirm: t("admin.confirm_delete")},
+      class: "danger" %>
+  </td>
 </tr>

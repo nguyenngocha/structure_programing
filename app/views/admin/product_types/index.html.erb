@@ -1,5 +1,4 @@
 <%= provide :title, t("admin.product_types") %>
-
 <h1><%= t "admin.product_types" %></h1>
 <%= link_to new_admin_product_type_path do %>
   <div class="btn btn-success">
@@ -11,12 +10,16 @@
 <br/ >
 <table class="table">
   <thead>
-    <tr>
+     <tr>
       <th><%= t "admin.id" %></th>
-      <th><%= t "admin.product_type.name" %>
-        <i class="glyphicon glyphicon-th"></i></th>
-      <th><i class="glyphicon glyphicon-wrench"></i></th>
-      <th><i class="glyphicon glyphicon-trash"></i></th>
+      <th><%= t "admin.town.name" %>
+        <i class="glyphicon glyphicon-tower"></i></th>
+      <th><%= t "admin.town.city" %>
+        <i class="glyphicon glyphicon-equalizer"></i></th>
+      <th style="background-color: #d8e09a; width:50px; text-align:center">
+        <i class="glyphicon glyphicon-wrench"></i></th>
+      <th style="background-color: #c19a56; width:50px; text-align:center">
+        <i class="glyphicon glyphicon-trash"></i></th>
     </tr>
   </thead>
   <tbody>
