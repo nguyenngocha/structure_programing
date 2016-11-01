@@ -3,7 +3,7 @@ class Admin::ProductsController < Admin::AdminController
   before_action :load_product, only: [:show, :edit, :update, :destroy]
 
   def index
-    @products = Product.all
+    @products = Product.page(params[:page]).per Settings.paginate.products_for_page
   end
 
   def new

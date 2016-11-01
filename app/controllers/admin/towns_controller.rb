@@ -3,7 +3,7 @@ class Admin::TownsController < Admin::AdminController
   before_action :load_town, only: [:edit, :update, :destroy]
 
   def index
-    @towns = Town.all
+    @towns = Town.includes(:city).page(params[:page]).per Settings.paginate.towns_for_page
   end
 
   def new

@@ -2,7 +2,7 @@ class Admin::ProductTypesController < Admin::AdminController
   before_action :load_product_type, only: [:edit, :update, :destroy]
 
   def index
-    @product_types = ProductType.all
+    @product_types = ProductType.page(params[:page]).per Settings.paginate.product_types_for_page
   end
 
   def new
