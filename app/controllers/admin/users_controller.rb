@@ -3,7 +3,7 @@ class Admin::UsersController < Admin::AdminController
   before_action :find_user, only: [:edit, :edit, :update, :destroy]
 
   def index
-    @users = User.buyer
+    @users = User.buyer.page(params[:page]).per Settings.paginate.users_for_page
   end
 
   def new

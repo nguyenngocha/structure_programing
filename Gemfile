@@ -15,6 +15,8 @@ gem "bootstrap-sass"
 gem "config"
 gem "paperclip", "~> 5.0.0"
 gem "ckeditor"
+gem "kaminari"
+gem "bootstrap-kaminari-views"
 
 group :development, :test do
   gem "byebug", platform: :mri

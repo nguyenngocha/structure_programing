@@ -3,7 +3,7 @@ class Admin::CitiesController < Admin::AdminController
   before_action :build_city, only: :create
 
   def index
-    @cities = City.all
+    @cities = City.page(params[:page]).per Settings.paginate.cities_per_page
   end
 
   def new
