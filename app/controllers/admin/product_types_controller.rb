@@ -30,7 +30,7 @@ class Admin::ProductTypesController < Admin::AdminController
 
   def destroy
     @product_type.destroy
-    flash[:success] = t "admin.destroy_success", source: "product type"
+    flash[:success] = t "admin.delete_success", source: "product type"
     redirect_to admin_product_types_path
   end
 

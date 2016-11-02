@@ -1,0 +1,27 @@
+<header>
+  <h3 class="head text-center">Latest Products</h3>
+</header>
+
+<%= render @products %>
+
+<div class="col-md-4 product simpleCart_shelfItem text-center">
+  <a href="single.html"><img src="images/p5.jpg" alt="" /></a>
+  <div class="mask">
+    <a href="single.html">Quick View</a>
+  </div>
+  <a class="product_name" href="single.html">perfectly simple</a>
+  <p><a class="item_add" href="#"><i></i> <span class="item_price">$750</span></a></p>
+</div>
+
+<div class="col-md-4 product simpleCart_shelfItem text-center">
+  <a href="single.html"><img src="images/p5.jpg" alt="" /></a>
+  <div class="mask">
+    <a href="single.html">Quick View</a>
+  </div>
+  <a class="product_name" href="single.html">perfectly simple</a>
+  <p><a class="item_add" href="#"><i></i> <span class="item_price">$750</span></a></p>
+</div>
+
+<div class="clearfix"></div>
+
+<%= paginate @products, theme: "twitter-bootstrap-3" %>

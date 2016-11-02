@@ -12,11 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap
 //= require turbolinks
 //= require_tree .
 //= require nested_attributes
 //= require ckeditor/init
+//= require bootstrap
 
 $(document).on('ready', function() {
   setTimeout(function() {

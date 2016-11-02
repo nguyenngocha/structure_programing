@@ -1,30 +1,35 @@
 <%= provide :title, t("admin.towns") %>
+<div class = "page-content">
+  <div class="col-md-10">
 
-<h1><%= t "admin.towns" %></h1>
-<%= link_to new_admin_town_path do %>
-  <div class="btn btn-success">
-    <%= t "admin.town.new" %>
-    <i class="glyphicon glyphicon-plus"></i>
+    <h1><%= t "admin.towns" %></h1>
+    <%= link_to new_admin_town_path do %>
+      <div class="btn btn-success">
+        <%= t "admin.town.new" %>
+        <i class="glyphicon glyphicon-plus"></i>
+      </div>
+    <% end %>
+    <br/ >
+    <br/ >
+    <table class="table">
+      <thead>
+        <tr>
+          <th><%= t "admin.id" %></th>
+          <th><%= t "admin.town.name" %>
+            <i class="glyphicon glyphicon-tower"></i></th>
+          <th><%= t "admin.town.city" %>
+            <i class="glyphicon glyphicon-equalizer"></i></th>
+          <th class="edit">
+            <i class="glyphicon glyphicon-wrench"></i></th>
+          <th class="delete">
+            <i class="glyphicon glyphicon-trash"></i></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @towns %>
+      </tbody>
+    </table>
+    <%= paginate @towns, theme: "twitter-bootstrap-3" %>
   </div>
-<% end %>
-<br/ >
-<br/ >
-<table class="table">
-  <thead>
-    <tr>
-      <th><%= t "admin.id" %></th>
-      <th><%= t "admin.town.name" %>
-        <i class="glyphicon glyphicon-tower"></i></th>
-      <th><%= t "admin.town.city" %>
-        <i class="glyphicon glyphicon-equalizer"></i></th>
-      <th style="background-color: #d8e09a; width:50px; text-align:center">
-        <i class="glyphicon glyphicon-wrench"></i></th>
-      <th style="background-color: #c19a56; width:50px; text-align:center">
-        <i class="glyphicon glyphicon-trash"></i></th>
-    </tr>
-  </thead>
-  <tbody>
-    <%= render @towns %>
-  </tbody>
-</table>
-<%= paginate @towns, theme: "twitter-bootstrap-3" %>
+</div>
+
