@@ -4,6 +4,8 @@ paginate:
   products_for_page: 10
   towns_for_page: 10
   users_for_page: 10
+  static_page_products_for_page: 5
+
 cities:
   1: "An Giang"
   2: "Bà Rịa - Vũng Tàu"

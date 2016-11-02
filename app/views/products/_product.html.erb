@@ -1,0 +1,9 @@
+<div class="col-md-4 product simpleCart_shelfItem text-center">
+
+  <%= link_to image_tag(product.product_images.first.image), product %>
+  <div class="mask">
+    <%= link_to "Quick View", product %>
+  </div>
+  <%= link_to product.name, product %>
+  <p><a class="item_add" href="#"><i></i> <span class="item_price"><%= product.price %></span></a></p>
+</div>

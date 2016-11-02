@@ -17,6 +17,7 @@ gem "paperclip", "~> 5.0.0"
 gem "ckeditor"
 gem "kaminari"
 gem "bootstrap-kaminari-views"
+gem "faker"
 
 group :development, :test do
   gem "byebug", platform: :mri

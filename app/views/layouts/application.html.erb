@@ -16,15 +16,11 @@
           <div class="col-md-2">
             <%= render "layouts/admin_sidebar" %>
           </div>
-          <div class="col-md-10">
-            <div class="admin-content">
-              <div class="container">
-                <% flash.each do |message_type, message| %>
-                  <%= content_tag :div, message, class: "alert alert-#{message_type}" %>
-                <% end %>
-                <%= yield %>
-              </div>
-            </div>
+          <div class="container">
+            <% flash.each do |message_type, message| %>
+              <%= content_tag :div, message, class: "alert alert-#{message_type}" %>
+            <% end %>
+            <%= yield %>
           </div>
         </div>
       </div>
@@ -41,6 +37,7 @@
         <% end %>
         <%= yield %>
       </div>
+      <%= render "layouts/footer" %>
     <% end %>
   </body>
 </html>
