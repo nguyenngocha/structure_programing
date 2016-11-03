@@ -1,3 +1,7 @@
 en:
   user:
     home_pages: "Home Page"
+    cart: "Cart"
+    contact: "Contact"
+    products: "Products"
+    product_types: "Product Types"

@@ -248,3 +248,15 @@ html{
   width:50px;
   text-align:center;
 }
+
+.page-content {
+  .row {
+    margin-top: 0px;
+  }
+  .container {
+    margin-top: 40px;
+  }
+  .sidebar {
+    margin-top: 80px;
+  }
+}

@@ -19,5 +19,6 @@ Rails.application.routes.draw do
   }
 
   resources :products, only: :show
-  resources :user_items
+  resources :cart_items
+  resources :carts
 end

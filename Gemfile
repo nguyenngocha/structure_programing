@@ -18,6 +18,7 @@ gem "ckeditor"
 gem "kaminari"
 gem "bootstrap-kaminari-views"
 gem "faker"
+gem "ransack"
 
 group :development, :test do
   gem "byebug", platform: :mri

@@ -42,8 +42,8 @@ class Admin::ProductColorsController < Admin::AdminController
   def load_product_color
     @product_color = ProductColor.find_by_id params[:id]
     if @product_color.nil?
-    	flash[:danger] = t "admin.not_found", source: "product color"
-    	redirect_to admin_product_colors_path
+      flash[:danger] = t "admin.not_found", source: "product color"
+      redirect_to admin_product_colors_path
     end
   end
 end

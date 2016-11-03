@@ -1,0 +1,30 @@
+<div class="cart-gd">
+  <div class="cart-header">
+    <div class="close1"><%= link_to cart_item_path(cart_item),
+      method: :delete, data: {confirm: t("admin.confirm_delete")},
+      class: "danger" do %>
+        <i class="glyphicon glyphicon-trash"></i>
+      <% end %>
+    </div>
+
+    <div class="cart-sec simpleCart_shelfItem">
+      <div class="cart-item cyc">
+        <%= image_tag cart_item.product.product_images.first.image %>
+      </div>
+      <div class="cart-item-info">
+        <h3><a href="#"><%= cart_item.product.name %></a><span>Pickup time: <%= cart_item.created_at %></span></h3>
+        <ul class="qty">
+          <li><p>order value: <%= cart_item.number %></p></li>
+          <li><p>FREE delivery</p></li>
+        </ul>
+        <div class="delivery">
+          <p>Service Charges : $<%= cart_item.number * cart_item.product.price %></p>
+          <span>Delivered in
+            <%= cart_item.number.to_s + " - " + cart_item.number.to_s %> : 30 hours</span>
+          <div class="clearfix"></div>
+        </div>  
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<% if @load_more %>
+  $(".products-grid").append("<%= j render @products %>");
+  <% if @products.next_page.nil? %>
+    $(".load-more").hide();
+  <% end %>
+<% else %>
+  $(".user").html("<div class='container'><div class='main-content'><%= j render 'shared/online_strip' %><header><h3 class='head text-center' style='padding-top: 100px;'></header></h3><h1>Search Results</h1><div class='products-grid'><%= j render @products %></div></div>");
+<% end %>

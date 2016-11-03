@@ -1,0 +1,19 @@
+<div class="online-strip">
+  <div class="col-md-4 follow-us">
+    <h3><%= t "home_page.follow_us" %>: <%= link_to "www.facebook.com", "www.facebook.com" %></h3>
+  </div>
+  <div class="col-md-4 shipping-grid">
+    <div class="shipping">
+      <img src="images/shipping.png" alt="" />
+    </div>
+    <div class="shipping-text">
+      <h3><%= t "home_page.free_ship" %></h3>
+      <p><%= t "home_page.order_over", money: Settings.static.money %></p>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <div class="col-md-4 online-order">
+    <p><%= t "home_page.order_online" %></p>
+    <h3><%= t "home_page.tel", tel: Settings.static.tel %></h3>
+  <div class="clearfix"></div>
+</div>
