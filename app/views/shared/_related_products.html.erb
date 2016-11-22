@@ -1,0 +1,20 @@
+<div class="other-products">
+  <div class="container">
+    <h3 class="like text-center"><%= t "home_page.relation_product" %></h3>
+    <ul id="flexiselDemo3">
+      <% relation_products.each do |product| %>
+        <li>
+          <%= link_to product do %>
+            <%= image_tag product.product_images.first.image %>
+            <div class="product liked-product simpleCart_shelfItem">
+              <%= link_to product.name, product, class: "like_name" %>
+              <%= link_to product, class: "item_add" do %>
+                <p><i></i><span class="item_price">$<%= product.price %></span></p>
+              <% end %>
+            </div>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

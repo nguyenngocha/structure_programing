@@ -1,0 +1,9 @@
+en:
+  home_page:
+    search_results: "Search Results" 
+    follow_us: "Follow us"
+    free_ship: "Free Shipping"
+    order_over: "on orders over $%{money}"
+    order_online: "Order online"
+    tel: "Tel: %{tel}"
+    relation_product: "Relation Product Collection"

@@ -6,6 +6,10 @@ paginate:
   users_for_page: 10
   static_page_products_for_page: 5
 
+static:
+  money: 199
+  tel: "0123423423"
+
 cities:
   1: "An Giang"
   2: "Bà Rịa - Vũng Tàu"
