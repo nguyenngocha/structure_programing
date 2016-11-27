@@ -1,0 +1,5 @@
+<tr>
+  <td><%= link_to cart.id, cart_path(cart) %></td>
+  <td><p class="<%= status_color cart.status %>"><%= cart.status %></p></td>
+  <td><%= time_ago_in_words cart.created_at %> ago</td>
+</tr>
