@@ -24,6 +24,7 @@
                 <ul class="dropdown-menu animated fadeInUp">
                   <% if @current_user.buyer? %>
                     <li><%= link_to t("devise.button.profile"), edit_user_registration_path %></li>
+                    <li><%= link_to t("user.carts"), carts_path %></li>
                     <li><%= link_to t("devise.button.logout"), destroy_user_session_path,
                       method: :delete %></li>
                   <% elsif @current_user.admin? %>

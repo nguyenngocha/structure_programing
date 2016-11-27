@@ -10,3 +10,5 @@ en:
     init: "in cart"
     active: "this ordered product has been send to admin"
     shipping: "this ordered product has been accept by admin and shipping in 3-7 days"
+    closed: "this ordered product has been shipped successfully or rejected"
+    carts: "My Carts"

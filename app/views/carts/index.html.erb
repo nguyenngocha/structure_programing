@@ -1,0 +1,21 @@
+<%= provide :title, t("admin.carts") %>
+
+<div class = "page-content">
+  <div class="col-md-10">
+    <h1><%= t "admin.carts" %></h1>
+    <br/ >
+    <table class="table">
+      <thead>
+        <tr>
+          <th><%= "Cart ID" %></th>
+          <th><%= t "admin.cart.status" %></th>
+          <th><%= "Create at" %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @carts %>
+      </tbody>
+    </table>
+    <%= paginate @carts, theme: "twitter-bootstrap-3" %>
+  </div>
+</div>
