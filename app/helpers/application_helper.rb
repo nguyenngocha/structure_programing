@@ -21,6 +21,17 @@ module ApplicationHelper
       \"#{escape_javascript(@tmpl)}\")")
   end
 
+  def status_color status
+    case status
+    when "active"
+      return "danger1"
+    when "init"
+      return "info"
+    when "shipping"
+      return "success"
+    end
+  end
+
   private
   def render_fields f, association
     new_object = f.object.class.reflect_on_association(association).klass.new

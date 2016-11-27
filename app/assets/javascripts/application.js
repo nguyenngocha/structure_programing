@@ -106,4 +106,11 @@ $(document).on('turbolinks:load', function() {
     controlNav: "thumbnails"
     });
   });
+
+  $(window).load(function() {
+    $('.flexslider').flexslider({
+    animation: "slide",
+    controlNav: "thumbnails"
+    });
+  });
 });

@@ -1,5 +1,4 @@
 <%= render "shared/banner" %>
-    <!-- checkout -->
 <div class="cart-items">
   <div class="container">
     <div class="clearfix"></div>
@@ -8,6 +7,11 @@
     <%= render @cart_items %>
   </div>
   <div class="text-center">
-    <%= render "checkout_form" %>
+    <% if @cart.init? %>
+      <%= link_to checkout_path(@cart), class: "btn btn-primary" do %>
+        <h4>Checkout <i class="glyphicon glyphicon-shopping-cart"></i></h4>
+      <% end %>
+    <% else %>
+    <% end %>
   </div>
 </div>

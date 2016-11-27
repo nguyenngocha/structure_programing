@@ -29,6 +29,7 @@ class Admin::CitiesController < Admin::AdminController
   end
 
   def destroy
+    @city.destroy
     flash[:success] = t "admin.delete_success", source: "city"
     redirect_to admin_cities_path
   end

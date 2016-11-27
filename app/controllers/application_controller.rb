@@ -2,11 +2,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :namespace
   before_action :cog_user
-  
+
   def after_sign_in_path_for resource
     get_root_path
   end
-  
+
   def verify_admin
     unless current_user.admin?
       flash[:danger] = t "admin.authorize"
@@ -15,7 +15,11 @@ class ApplicationController < ActionController::Base
   end
 
   def cog_user
-    @cog_user = current_or_guest_user
+    @current_user = current_or_guest_user
+    unless @current_user.admin?
+      @cart = @current_user.carts.find_by status: "init"
+      @cart ||= @current_user.carts.create!
+    end
   end
 
   def current_or_guest_user

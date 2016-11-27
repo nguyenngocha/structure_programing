@@ -3,8 +3,15 @@
     <li class="current"><a href="/admin"><i class="glyphicon glyphicon-home"></i> Home</a></li>
 
     <li class="panel-group hvr-bounce-to-left">
+      <%= link_to admin_carts_path do %>
+        <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+        <span class="lm-text"><%= t "admin.carts" %></span>
+      <% end %>
+    </li>
+
+    <li class="panel-group hvr-bounce-to-left">
       <%= link_to admin_products_path do %>
-        <span class="glyphicon glyphicon glyphicon-th-list" aria-hidden="true"></span>  
+        <span class="glyphicon glyphicon glyphicon-th-list" aria-hidden="true"></span>
         <span class="lm-text"><%= t "admin.products" %></span>
       <% end %>
     </li>

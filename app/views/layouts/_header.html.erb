@@ -22,9 +22,13 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <%= t "devise.button.my_account" %><b class="caret"></b></a>
                 <ul class="dropdown-menu animated fadeInUp">
-                  <% if user_signed_in? %>
+                  <% if @current_user.buyer? %>
                     <li><%= link_to t("devise.button.profile"), edit_user_registration_path %></li>
-                    <li><%= link_to t("devise.button.logout"), destroy_user_session_path %></li>
+                    <li><%= link_to t("devise.button.logout"), destroy_user_session_path,
+                      method: :delete %></li>
+                  <% elsif @current_user.admin? %>
+                    <li><%= link_to t("devise.button.logout"), destroy_user_session_path,
+                      method: :delete %></li>
                   <% else %>
                     <li><%= link_to t("devise.button.login"), new_user_session_path %></li>
                   <% end %>

@@ -8,7 +8,7 @@
  *
  * Contributing author: Tyler Smith (@mbmufffin)
  */
-
+$(document).on('turbolinks:load', function() {
 ;(function ($) {
 
   //FlexSlider: Object Instance
@@ -901,3 +901,4 @@
   }  
 
 })(jQuery);
+});

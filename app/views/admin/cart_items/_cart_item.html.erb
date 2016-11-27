@@ -20,8 +20,8 @@
           <li><p>order value: <%= cart_item.number %></p></li>
           <li><p>FREE delivery</p></li>
         </ul>
-        <div class="<%= status_color cart_item.cart.status %>">
-          Status: <%= t "user.#{cart_item.cart.status}" %>
+        <div>
+          Status: <%= cart_item.cart.status %>
         </div>
         <div class="delivery">
           <p>Service Charges : $<%= cart_item.number * cart_item.product.price %></p>

@@ -51,7 +51,8 @@
             </ul>
           </li>
 
-          <li><%= link_to t("user.cart"), cart_path(@cog_user.carts.find_by status: "active") %></li>
+          <li><%= link_to t("user.cart"),
+            cart_path(@current_user.carts.find_by status: "init") unless @current_user.admin? %></li>
           <li><%= link_to t("user.contact"), "#" %></li>
         </ul>
       </div>
