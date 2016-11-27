@@ -1,0 +1,24 @@
+<%= provide :title, t("admin.carts") %>
+
+<div class = "page-content">
+  <div class="col-md-10">
+    <h1><%= t "admin.carts" %></h1>
+    <br/ >
+    <table class="table">
+      <thead>
+        <tr>
+          <th><%= t("admin.id") %></th>
+          <th><%= t "admin.cart.of_user" %>
+            <i class="glyphicon glyphicon-user"></i></th>
+          <th><%= t "admin.cart.status" %></th>
+          <th class="delete">
+            <i class="glyphicon glyphicon-trash"></i></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @carts %>
+      </tbody>
+    </table>
+    <%= paginate @carts, theme: "twitter-bootstrap-3" %>
+  </div>
+</div>

@@ -1,3 +1,4 @@
+$(document).on('turbolinks:load', function() {
 (function ($) {
 
   $.fn.flexisel = function (options) {
@@ -271,3 +272,4 @@
 };
 
 })(jQuery);
+});

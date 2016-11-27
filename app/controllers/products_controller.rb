@@ -5,10 +5,6 @@ class ProductsController < ApplicationController
     @product_types = ProductType.all
     @relation_products = Product.where(product_type_id: @product.product_type.id)
       .includes(:product_images)
-
-    @cart = @cog_user.carts.find_by status: "active"
-    @cart ||= @cog_user.carts.create!
-
     @cart_item = CartItem.new
   end
 

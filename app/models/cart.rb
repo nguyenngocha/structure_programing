@@ -3,5 +3,5 @@ class Cart < ApplicationRecord
 
   has_many :cart_items, dependent: :destroy
 
-  enum status: [:active, :closed]
+  enum status: [:init, :active, :shipping, :closed]
 end

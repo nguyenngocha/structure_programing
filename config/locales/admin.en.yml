@@ -1,5 +1,13 @@
 en:
   admin:
+    closed: "a cart order has been closed"
+    success_accept_checkout: "accept successfully checkout %{source}"
+    fail_accept_checkout: "accept failed checkout %{source}"
+    carts: "Carts"
+    cart:
+      reject: "Reject"
+      of_user: "Of User"
+      status: "Status"
     home_pages: "Admin Home Page"
     cities: "Cities"
     authorize: "you can't access that page"

@@ -1,0 +1,25 @@
+<div class="col-md-10">
+  <div class="cart-items">
+    <div class="container">
+      <div class="clearfix"></div>
+
+      <h1><%= @cart.user.name %>'s Order List</h1>
+      <% address = @cart.user.address %>
+      <p>Buyer Address:</p>
+      <p><%= "home: #{address.home}" if address %></p>
+      <p><%= "village: #{address.village}" if address %></p>
+      <p><%= "town: #{address.town.name}" if address %></p>
+      <p><%= "city: #{address.city.name}" if address %></p>
+      <%= render @cart_items %>
+    </div>
+    <br />
+    <br />
+    <div class="text-center">
+      <% if @cart.active? %>
+        <%= link_to admin_accept_checkout_path(@cart), class: "btn btn-warning" do %>
+          <h4>Checkout <i class="glyphicon glyphicon-shopping-cart"></i></h4>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

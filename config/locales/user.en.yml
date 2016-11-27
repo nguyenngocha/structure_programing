@@ -5,3 +5,8 @@ en:
     contact: "Contact"
     products: "Products"
     product_types: "Product Types"
+    checkout_success: "checkout success cart has id: %{resource}"
+    checkout_false: "checkout fail cart has id: %{resource}"
+    init: "in cart"
+    active: "this ordered product has been send to admin"
+    shipping: "this ordered product has been accept by admin and shipping in 3-7 days"

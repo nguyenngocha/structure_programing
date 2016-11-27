@@ -10,6 +10,9 @@ Rails.application.routes.draw do
     resources :product_types
     resources :products
     resources :product_colors
+    resources :carts
+    resources :cart_items
+    get "accept_checkout" => "carts#accept_checkout"
   end
 
   devise_for :users, controllers: {
@@ -18,7 +21,10 @@ Rails.application.routes.draw do
     passwords: "users/passwords"
   }
 
+  get "checkout" => "carts#checkout"
   resources :products, only: :show
   resources :cart_items
   resources :carts
+  resources :users
+  get "checkout_info" => "carts#checkout_info"
 end

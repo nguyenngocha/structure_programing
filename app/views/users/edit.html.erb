@@ -1,0 +1,52 @@
+<%= form_for @current_user do |f| %>
+  <%= render "shared/error_messages", object: @current_user %>
+
+  <div class="row">
+    <div class="col-md-4 col-md-offset-1">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: "form-control" %>
+
+      <%= f.label :email %>
+      <%= f.email_field :email, autofocus: true, class: "form-control" %>
+
+      <%= f.label :password %>
+      <% if @minimum_password_length %>
+        <em>(<%= t "devise.password", number_of_password: @minimum_password_length %>)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+  
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+      
+      <%= f.label :phone_number %>
+      <%= f.text_field :phone_number, autocomplete: "off", class: "form-control" %>
+    </div>
+
+    <div class="col-md-4 col-md-offset-1">
+      <%= f.fields_for :address do |ff| %>
+        <%= ff.label :city %>
+        <%= ff.select :city_id, options_from_collection_for_select(@cities,
+          :id, :name, selected: @current_user.address.city_id),
+          {include_blank: false}, class: "form-control" %>
+
+        <div class="town">  
+          <%= ff.label :town %>
+          <%= ff.select :town_id, options_from_collection_for_select(@towns,
+            :id, :name, selected: @current_user.address.town_id),
+            {include_blank: false}, class: "form-control" %>
+        </div>
+
+        <%= ff.label :village %>
+        <%= ff.text_field :village, autocomplete: "off", class: "form-control" %>
+  
+        <%= ff.label :home %>
+        <%= ff.text_field :home, autocomplete: "off", class: "form-control" %>
+      <% end %>
+    </div>
+  </div>
+  <br />
+  <div class="col-md-2 col-md-offset-5 center">
+    <%= f.submit yield(:submit), class: "btn btn-primary" %>
+  <% end %>
+  <br />
+</div>
